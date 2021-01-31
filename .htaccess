@@ -1,0 +1,10 @@
+##### LOCAWEB - NAO REMOVER #####
+AddHandler php73-script .php 
+suPHP_ConfigPath /home/LOGINFTP/
+
+suPHP_ConfigPath /home/flavio/project/travelAgency
+##### LOCAWEB - NAO REMOVER #####
+
+RewriteEngine On
+RewriteRule ^$ public/ [L]
+RewriteRule (.*) public/$1 [L]
