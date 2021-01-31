@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
@@ -17,14 +18,10 @@ use App\Models\User;
 |
 */
 
-Route::get('/site', function () {
-        $users = User::all();
-        echo '<hr>';
-        foreach ($users as $user) {
-            echo "{$user->name} <br>";
-        }
-        echo '<hr>';
-    });
+Route::prefix('budgets')->group(function () {
+    Route::post('/save', [BudgetController::class, 'save'])->name('save_budgets');
+});
+
 Route::resource('home', HomeController::class);
 Route::resource('sobre', AboutController::class);
 Route::resource('destino', DestinationController::class);
