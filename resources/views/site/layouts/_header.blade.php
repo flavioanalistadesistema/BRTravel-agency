@@ -33,8 +33,8 @@
 		<div class="container">
             <!--<a class="navbar-brand" href="index.html"><span>Traveland</span></a>-->
             <a class="navbar-brand" href="index.html">
-                <img class="img-logo" 
-                    src="images/logo_travelAgency.png">
+                <img class="img-logo"
+                    src="{{asset('images/logo_travelAgency.png')}}">
                 </img>
             </a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
@@ -57,5 +57,5 @@
 		</div>
 	</nav>
     <!-- END nav -->
-    
+
     @yield('body')

@@ -19,7 +19,9 @@ use App\Models\User;
 */
 
 Route::prefix('budgets')->group(function () {
-    Route::post('/save', [BudgetController::class, 'save'])->name('save_budgets');
+    Route::post('/store', [BudgetController::class, 'store'])->name('save_budgets');
+    Route::get('/success/{name}/{email}', [BudgetController::class, 'success'])->name('success_budgets');
+    //Route::get('/success', function () {return view('site.success');})->name('success');
 });
 
 Route::resource('home', HomeController::class);

@@ -2,34 +2,44 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\budget;
 use Illuminate\Http\Request;
+use App\Validations\ValidationsFormBudgets;
 
 class BudgetController extends Controller
 {
-    /**
-     *
-     */
-    public function save(Request $request)
+    private $validationsFormBudgets;
+
+    public function __construct(ValidationsFormBudgets $validationsFormBudgets)
     {
+        $this->validationsFormBudgets = $validationsFormBudgets;
+    }
 
-        $validated = $request->validate(
-            [
-                'destination_budgets' => 'required',
-                'name_budgets'  => 'required|min:5|max:15',
-                'phone_budgets' => 'required|min:11|numeric'
-            ],
-            [
-                'name_budgets.required' => 'Empty field',
-                'phone_budgets.required' => 'Empty field',
-                'destination_budgets.required' => 'Empty field',
-                'name_budgets.max' => 'Maximum 15 characters',
-                'name_budgets.min' => 'Minimum 5 characters',
-                'phone_budgets.min' => 'Minimum 11 characters',
-                'phone_budgets.numeric' => 'Only number'
-            ]
-        );
+    public function store(Request $request)
+    {
+        $this->validationsFormBudgets->validation($request);
 
-        var_dump($validated);
-        exit;
+        $data = $request->all();
+        $budgets = new budget();
+        $budgets->name_budgets = $data['name_budgets'];
+        $budgets->phone_budgets = $data['phone_budgets'];
+        $budgets->email_budgets = $data['email_budgets'];
+        $budgets->origin_budgets = $data['origin_budgets'];
+        $budgets->destination_budgets = $data['destination_budgets'];
+        $budgets->checkout_in_date_budgets = date('Y-m-d H:i:s', strtotime($data['checkout_in_date_budgets']));
+        $budgets->checkout_out_date_budgets = date('Y-m-d H:i:s', strtotime($data['checkout_out_date_budgets']));
+        $response = $budgets->save();
+        if ($response){
+            return redirect()->action(
+                [BudgetController::class, 'success'], ['name' => $data['name_budgets'], 'email' => $data['email_budgets']]
+            );
+        }else {
+            throw new \Exception('not possible create new budgets');
+        }
+    }
+
+    public function success($name, $email)
+    {
+        return view('site.success', ['name' => $name, 'email' => $email]);
     }
 }
