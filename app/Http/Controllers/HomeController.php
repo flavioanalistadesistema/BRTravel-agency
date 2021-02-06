@@ -15,6 +15,9 @@ class HomeController extends Controller
     public function index()
     {
         $title = 'Travel';
+        $numberAdults = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        $numberChildres = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
         $aeroports = [
             'OUROLANDIA DO NORTE',
             'HOTEL TRANSAMÉRICA',
@@ -829,7 +832,7 @@ class HomeController extends Controller
             'BEIJING CAPITAL INTERNATIONAL AIRPORT'
         ];
 
-        return view('site.index', compact('title', 'aeroports'));
+        return view('site.index', compact('title', 'aeroports', 'numberAdults', 'numberChildres'));
     }
 
     /**
@@ -896,5 +899,10 @@ class HomeController extends Controller
     public function destroy(Home $home)
     {
         //
+    }
+
+    public function getEdu()
+    {
+        return view('welcome');
     }
 }

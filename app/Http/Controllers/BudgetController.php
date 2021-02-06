@@ -20,6 +20,7 @@ class BudgetController extends Controller
         $this->validationsFormBudgets->validation($request);
 
         $data = $request->all();
+        var_dump($data);exit;
         $budgets = new budget();
         $budgets->name_budgets = $data['name_budgets'];
         $budgets->phone_budgets = $data['phone_budgets'];

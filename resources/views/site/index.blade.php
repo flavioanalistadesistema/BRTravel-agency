@@ -594,6 +594,8 @@
         </div>
     </div>
 </section>
-
-
 @extends('site.layouts._footer')
+
+
+
+
