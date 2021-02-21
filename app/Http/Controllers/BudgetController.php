@@ -4,22 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreBudgetsRequest;
 use App\Models\Budget;
+use Illuminate\Http\Request;
 
 class BudgetController extends Controller
 {
     private $validationsFormBudgets;
 
-    public function store(StoreBudgetsRequest $request)
+    public function store(Request $request)
     {
         $data = $request->all();
-        var_dump($data);exit;
         $budgets = new Budget();
         $budgets->name_budgets = $data['name_budgets'];
         $budgets->phone_budgets = $data['phone_budgets'];
         $budgets->email_budgets = $data['email_budgets'];
         $budgets->origin_budgets = $data['origin_budgets'];
-        $budgets->number_adults = $data['number_adults'];
-        $budgets->number_childre = $data['number_childre'];
         $budgets->destination_budgets = $data['destination_budgets'];
         $budgets->checkout_in_date_budgets = date('Y-m-d H:i:s', strtotime($data['checkout_in_date_budgets']));
         $budgets->checkout_out_date_budgets = date('Y-m-d H:i:s', strtotime($data['checkout_out_date_budgets']));

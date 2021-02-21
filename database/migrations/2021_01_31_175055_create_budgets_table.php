@@ -18,8 +18,8 @@ class CreateBudgetsTable extends Migration
             $table->string('name_budgets', 15);
             $table->string('phone_budgets', 15);
             $table->string('email_budgets');
-            $table->string('origin_budgets');
-            $table->string('destination_budgets');
+            $table->longText('origin_budgets');
+            $table->longText('destination_budgets');
             $table->date('checkout_in_date_budgets')->nullable();
             $table->date('checkout_out_date_budgets')->nullable();
             $table->timestamps();

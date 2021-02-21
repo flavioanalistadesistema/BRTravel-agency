@@ -72,7 +72,7 @@
         <div class="col-lg-2">
             <label for="#"></label>
             <div class="form-fiel">
-                <input class="form-control {{$errors->has('name_budgets') ? 'border-error-budgets': ''}}" placeholder="Name" type="text" name="name_budgets" value="{{ old('name_budgets') }}" id="name_budgets" minlength="5" maxlength="15" autofocus>
+                <input class="form-control {{$errors->has('name_budgets') ? 'border-error-budgets': ''}}" placeholder="First name" type="text" name="name_budgets" value="{{ old('name_budgets') }}" id="name_budgets" minlength="5" maxlength="15" autofocus>
                 @if ($errors->has('name_budgets'))
                 <li class="error_budgets">{{$errors->first('name_budgets')}}</li>
                 @endif
