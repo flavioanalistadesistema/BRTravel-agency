@@ -28,6 +28,7 @@ class StoreBudgetsRequest extends FormRequest
             'destination_budgets' => 'required',
             'checkout_in_date_budgets' => 'required',
             'checkout_out_date_budgets' => 'required',
+            'number_adults' => 'required',
             'name_budgets'  => 'required|regex:/(^([a-zA-z]+)(\d+)?$)/u|min:5|max:15',
             'phone_budgets' => 'required|min:11|numeric',
             'email_budgets' => 'required|email'
@@ -46,6 +47,7 @@ class StoreBudgetsRequest extends FormRequest
             'destination_budgets.required' => 'Empty field',
             'checkout_in_date_budgets.required' => 'Empty field',
             'checkout_out_date_budgets.required' => 'Empty field',
+            'number_adults.required' => 'Empty field',
             'name_budgets.required'  => 'Empty field',
             'phone_budgets.required' => 'Empty field',
             'email_budgets.required' => 'Empty field',

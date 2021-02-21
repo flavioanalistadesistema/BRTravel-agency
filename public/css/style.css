@@ -13714,3 +13714,11 @@ main strong {
 .success_budgets {
     color: #0dc726;
 }
+
+.select2-selection__rendered {
+    line-height: 51px !important;
+  }
+
+  .select2-selection {
+    height: 54px !important;
+  }

@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class budget extends Model
+class Aeroport extends Model
 {
     use HasFactory;
-     /**
+    /**
      * The table associated with the model table STUDENTS.
      *
      * @var string
      */
-    protected $table = 'budgets';
+    protected $table = 'aeroports';
 
     /**
      * The primary key associated with the table ID.
@@ -28,12 +28,7 @@ class budget extends Model
      * @var array
      */
     protected $fillable = [
-        'name_budgets',
-        'phone_budgets',
-        'email_budgets',
-        "origin_budgets",
-        'destination_budgets',
-        'checkout_in_date_budgets',
-        'checkout_out_date_budgets'
+        'acronyms',
+        'aeroport'
     ];
 }
