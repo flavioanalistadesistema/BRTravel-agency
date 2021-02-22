@@ -14,7 +14,7 @@ class DestinationController extends Controller
      */
     public function index()
     {
-        $title = "Lugares para Viajar";
+        $title = "Destiny";
         return view('site.destination', compact('title'));
     }
 

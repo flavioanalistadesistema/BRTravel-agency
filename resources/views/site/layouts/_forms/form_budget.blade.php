@@ -39,34 +39,6 @@
                 @endif
             </div>
         </div>
-        <!-- <div class="col-lg-2">
-            <label>Number Adults</label>
-            <div class="form-field">
-                <select name="number_adults" id="" class="form-control {{$errors->has('number_adults') ? 'border-error-budgets': ''}}">
-                    <option value="" selected></option>
-                    @foreach($numberAdults as $number)
-                    <option value="{{$number}}" {{ old('origin_budgets', $number ) === $number ? '' : '' }}>{{$number}}</option>
-                    @endforeach
-                </select>
-                @if ($errors->has('number_adults'))
-                <li class="error_budgets">{{ $errors->first('number_adults') }}</li>
-                @endif
-            </div>
-        </div>
-        <div class="col-lg-2">
-            <label>Number Childres</label>
-            <div class="form-field">
-                <select name="number_childre" id="" class="form-control {{$errors->has('number_childre') ? '': ''}}">
-                    <option value="" selected></option>
-                    @foreach($numberChildres as $number)
-                    <option value="{{$number}}" {{ old('origin_budgets', $number ) === $number ? '' : '' }}>{{$number}}</option>
-                    @endforeach
-                </select>
-                @if ($errors->has('number_childre'))
-                <li class="error_budgets">{{ $errors->first('number_childre') }}</li>
-                @endif
-            </div>
-        </div> -->
     </div>
     <div class="row">
         <div class="col-lg-2">

@@ -35,7 +35,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
             <!--<a class="navbar-brand" href="index.html"><span>Traveland</span></a>-->
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="/">
                 <img class="img-logo"
                     src="{{asset('images/logo_travelAgency.png')}}">
                 </img>
@@ -48,12 +48,12 @@
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="{{route('home.index')}}" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="{{route('sobre.index')}}" class="nav-link">Sobre</a></li>
-					<li class="nav-item"><a href="{{route('destino.index')}}" class="nav-link">Destino</a></li>
+					<li class="nav-item"><a href="{{route('about.index')}}" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="{{route('destiny.index')}}" class="nav-link">Destiny</a></li>
 					<!--<li class="nav-item"><a href="hotel-resto.html" class="nav-link">Hotels &amp; Restaurant</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>-->
-					<li class="nav-item"><a href="{{route('contato.index')}}" class="nav-link">Contato</a></li>
-					<li class="nav-item cta"><a href="#" class="nav-link">Agende agora</a></li>
+					<li class="nav-item"><a href="{{route('contact.index')}}" class="nav-link">Contact</a></li>
+					<li class="nav-item cta"><a href="#" class="nav-link">Book now</a></li>
 
 				</ul>
 			</div>

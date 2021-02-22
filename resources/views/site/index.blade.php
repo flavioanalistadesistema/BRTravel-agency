@@ -6,10 +6,10 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
             <div class="col-md-7 ftco-animate mt-5" data-scrollax=" properties: { translateY: '70%' }">
                 <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                    Seja um viajante não um Turista
+                    Be a traveler not a tourist
                 </h1>
                 <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                    Viaje para qualquer canto do mundo, sem andar em circulos
+                    Travel to any corner of the world, without circling
                 </p>
             </div>
         </div>
@@ -595,7 +595,3 @@
     </div>
 </section>
 @extends('site.layouts._footer')
-
-
-
-

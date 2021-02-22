@@ -14,7 +14,7 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $title = 'Sobre nós';
+        $title = 'About Us';
         return view('site.about', compact('title'));
     }
 

@@ -7,7 +7,7 @@
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate pb-5 mb-5 text-center">
                 <h1 class="mb-3 bread">{{$title}}</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="{{route('home.index')}}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Destino <i class="ion-ios-arrow-forward"></i></span></p>
+                <p class="breadcrumbs"><span class="mr-2"><a href="{{route('home.index')}}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>{{$title}} <i class="ion-ios-arrow-forward"></i></span></p>
             </div>
         </div>
     </div>
@@ -18,68 +18,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="search-wrap-1 ftco-animate p-4">
-                    <form action="#" class="search-property-1">
-                        <div class="row">
-                            <div class="col-lg align-items-end">
-                                <div class="form-group">
-                                    <label for="#">Destination</label>
-                                    <div class="form-field">
-                                        <div class="icon"><span class="ion-ios-search"></span></div>
-                                        <input type="text" class="form-control" placeholder="Search place">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg align-items-end">
-                                <div class="form-group">
-                                    <label for="#">Check-in date</label>
-                                    <div class="form-field">
-                                        <div class="icon"><span class="ion-ios-calendar"></span></div>
-                                        <input type="text" class="form-control checkin_date" placeholder="Check In Date">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg align-items-end">
-                                <div class="form-group">
-                                    <label for="#">Check-out date</label>
-                                    <div class="form-field">
-                                        <div class="icon"><span class="ion-ios-calendar"></span></div>
-                                        <input type="text" class="form-control checkout_date" placeholder="Check Out Date">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg align-items-end">
-                                <div class="form-group">
-                                    <label for="#">Price Limit</label>
-                                    <div class="form-field">
-                                        <div class="select-wrap">
-                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">$100</option>
-                                                <option value="">$500</option>
-                                                <option value="">$1000</option>
-                                                <option value="">$2000</option>
-                                                <option value="">$3000</option>
-                                                <option value="">$4000</option>
-                                                <option value="">$5000</option>
-                                                <option value="">$6000</option>
-                                                <option value="">$7000</option>
-                                                <option value="">$8000</option>
-                                                <option value="">$9000</option>
-                                                <option value="">$10000</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg align-self-end">
-                                <div class="form-group">
-                                    <div class="form-field">
-                                        <input type="submit" value="Search" class="form-control btn btn-primary">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                @include('site.layouts._forms.form_budget')
                 </div>
             </div>
         </div>
