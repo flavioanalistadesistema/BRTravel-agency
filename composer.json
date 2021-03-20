@@ -9,13 +9,15 @@
     "license": "MIT",
     "require": {
         "php": "^7.3",
+        "aws/aws-sdk-php": "^3.175",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
+        "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "laravelcollective/html": "^6.2",
-        "phpmailer/phpmailer": "^6.2"
+        "phpmailer/phpmailer": "^6.2",
+        "wildbit/swiftmailer-postmark": "^3.3"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
