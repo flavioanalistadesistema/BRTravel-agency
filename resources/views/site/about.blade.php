@@ -23,7 +23,7 @@
                 <h3 class="heading mb-3">Activities</h3>
                 <p>	203 Fake St. Mountain View, San Francisco, California, USA</p>
               </div>
-            </div>      
+            </div>
           </div>
           <div class="col-md-3 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block">
@@ -32,7 +32,7 @@
                 <h3 class="heading mb-3">Travel Arrangements</h3>
                 <p>A small river named Duden flows by their place and supplies.</p>
               </div>
-            </div>    
+            </div>
           </div>
           <div class="col-md-3 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block">
@@ -41,7 +41,7 @@
                 <h3 class="heading mb-3">Private Guide</h3>
                 <p>A small river named Duden flows by their place and supplies.</p>
               </div>
-            </div>      
+            </div>
           </div>
           <div class="col-md-3 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block">
@@ -50,12 +50,12 @@
                 <h3 class="heading mb-3">Location Manager</h3>
                 <p>A small river named Duden flows by their place and supplies.</p>
               </div>
-            </div>      
+            </div>
           </div>
         </div>
       </div>
     </section>
-   	
+
     <section class="ftco-counter img" id="section-counter">
     	<div class="container">
     		<div class="row d-flex">
@@ -65,12 +65,27 @@
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">About Traveland</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+		            <h2 class="mb-4">BR Travel Agency.</h2>
+		            <p>
+                    BR Travel is a New York City based boutique Travel Agency.
+                    We pride ourselves on establishing long-
+                    term relationships with our clients.
+                    Our commitment to customer service is at the very core of who we are.
+                    We provide our clients with a high level of support to meet all of their travel needs ,
+                    from finding the most convenient route and rate for your airline tickets,
+                    to accommodating your pet on the same flight.
+                    Planning a vacation is more than booking a flight and hotel.
+                    it’s an experience that will last a life time.
+                    BR Travel offers you unmatched personal service for individuals and groups.
+                    All our vacation packages are personalized.
+                    Discover the amazing cultures around the world stress free.
+                    Let us handle your next vacation .
+                    Call us today! Our travel consultant team is always available to listen to your needs and organize the perfect travel experience.
+                    </p>
 		          </div>
 		        </div>
 		    		<div class="row">
-		          <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+		          <!-- <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center py-5 bg-light mb-4">
 		              <div class="text">
 		                <strong class="number" data-number="30">0</strong>
@@ -101,7 +116,7 @@
 		                <span>Happy Customers</span>
 		              </div>
 		            </div>
-		          </div>
+		          </div> -->
 		        </div>
 	        </div>
         </div>
@@ -201,7 +216,7 @@
         </div>
     	</div>
     </section>
-	
+
 
 		<section class="ftco-subscribe" style="background-image: url(images/bg_1.jpg);">
       <div class="overlay">
