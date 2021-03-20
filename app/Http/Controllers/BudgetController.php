@@ -10,7 +10,7 @@ class BudgetController extends Controller
 {
     private $validationsFormBudgets;
 
-    public function store(Request $request)
+    public function store(StoreBudgetsRequest $request)
     {
         $data = $request->all();
         $budgets = new Budget();

@@ -43,21 +43,21 @@ class StoreBudgetsRequest extends FormRequest
     public function messages()
     {
         return [
-            'origin_budgets.required' => 'Empty field',
-            'destination_budgets.required' => 'Empty field',
-            'checkout_in_date_budgets.required' => 'Empty field',
-            'checkout_out_date_budgets.required' => 'Empty field',
-            'number_adults.required' => 'Empty field',
-            'name_budgets.required'  => 'Empty field',
-            'phone_budgets.required' => 'Empty field',
-            'email_budgets.required' => 'Empty field',
-            'name_budgets.min'  => 'Minimum 5',
-            'name_budgets.max'  => 'Maximum 15',
+            'origin_budgets.required' => 'Campo vazio',
+            'destination_budgets.required' => 'Campo vazio',
+            'checkout_in_date_budgets.required' => 'Campo vazio',
+            'checkout_out_date_budgets.required' => 'Campo vazio',
+            'number_adults.required' => 'Campo vazio',
+            'name_budgets.required'  => 'Campo vazio',
+            'phone_budgets.required' => 'Campo vazio',
+            'email_budgets.required' => 'Campo vazio',
+            'name_budgets.min'  => 'Minimo 5',
+            'name_budgets.max'  => 'Máximo 15',
             'name_budgets.regex'  => 'Not number',
-            'phone_budgets.min' => 'Minimum 11',
-            'phone_budgets.max' => 'Maximum 19',
-            'phone_budgets.numeric' => 'Only number',
-            'email_budgets.email'   => 'Invalid email'
+            'phone_budgets.min' => 'Minimo 11',
+            'phone_budgets.max' => 'Máximo 19',
+            'phone_budgets.numeric' => 'Campo Numerico',
+            'email_budgets.email'   => 'Email inválido'
         ];
     }
 }
