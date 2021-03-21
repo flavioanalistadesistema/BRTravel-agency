@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreBudgetsRequest;
 use App\Models\Budget;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class BudgetController extends Controller
 {
@@ -23,10 +24,13 @@ class BudgetController extends Controller
         $budgets->checkout_out_date_budgets = date('Y-m-d H:i:s', strtotime($data['checkout_out_date_budgets']));
         $response = $budgets->save();
         if ($response) {
-            return redirect()->action(
-                [BudgetController::class, 'success'],
-                ['name' => $data['name_budgets'], 'email' => $data['email_budgets']]
-            );
+            Mail::send(new \App\Mail\emailTravelSistem($budgets));
+            if (!Mail::failures()) {
+                return redirect()->action(
+                    [BudgetController::class, 'success'],
+                    ['name' => $data['name_budgets'], 'email' => $data['email_budgets']]
+                );
+            }
         } else {
             throw new \Exception('not possible create new budgets');
         }

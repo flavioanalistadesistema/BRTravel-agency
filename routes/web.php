@@ -7,8 +7,11 @@ use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PhpMailerController;
+use App\Mail\emailTravelSistem;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,7 +31,6 @@ Route::prefix('budgets')->group(function () {
 Route::get('/', function(){
     return redirect('/home');
 });
-Route::get('/email', [PhpMailerController::class , 'index']);
 Route::resource('home', HomeController::class);
 Route::get('/autocomplete/view', [AutoCompleteController::class, 'index']);
 Route::get('/autocomplete/show', [AutoCompleteController::class, 'show']);
