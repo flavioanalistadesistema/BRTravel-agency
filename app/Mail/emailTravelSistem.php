@@ -33,7 +33,7 @@ class emailTravelSistem extends Mailable
     {
         $this->subject('Cotação do Site Travel Agency');
         $this->to(env('APP_EMAIL'), "Site Travel-Agency");
-        $this->bcc('flavioanalistadesistema', 'Flavio Dflugann');
+        $this->bcc('dflugann@gmail.com', 'Flavio Dflugann');
 
         return $this->markdown('mail.emailTravelSistem', [
             'client' => $this->client,

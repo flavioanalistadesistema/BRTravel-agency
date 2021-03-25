@@ -44,11 +44,9 @@
                     <h2 class="ftco-heading-2">Have a Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain
-                                    View, San Francisco, California, USA</span></li>
-                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929
-                                        210</span></a></li>
-                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                            <li><span class="icon icon-map-marker"></span><span class="text">PHONE (914) 902-5008</span></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">FAX (877) 729-6741-210</span></a></li>
+                            <li><a href="mailyo:info:brtravelagency.com"><span class="icon icon-envelope"></span><span class="text">brtravelagency.com</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -61,7 +59,7 @@
                     Copyright &copy;
                     <script>
                         document.write(new Date().getFullYear());
-                    </script> Todos os direitos reservados | TravelAgency
+                    </script> All rights reserved | TravelAgency
                 </p>
             </div>
         </div>

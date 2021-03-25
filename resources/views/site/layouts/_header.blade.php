@@ -53,7 +53,7 @@
 					<!--<li class="nav-item"><a href="hotel-resto.html" class="nav-link">Hotels &amp; Restaurant</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>-->
 					<li class="nav-item"><a href="{{route('contact.index')}}" class="nav-link">Contact</a></li>
-					<li class="nav-item cta"><a href="#" class="nav-link">Book now</a></li>
+					<li class="nav-item cta"><a href="/book" class="nav-link">Book now</a></li>
 
 				</ul>
 			</div>

@@ -28,12 +28,13 @@ Route::prefix('budgets')->group(function () {
     Route::get('/success/{name}/{email}', [BudgetController::class, 'success'])->name('success_budgets');
     //Route::get('/success', function () {return view('site.success');})->name('success');
 });
-Route::get('/', function(){
-    return redirect('/home');
-});
 Route::resource('home', HomeController::class);
 Route::get('/autocomplete/view', [AutoCompleteController::class, 'index']);
 Route::get('/autocomplete/show', [AutoCompleteController::class, 'show']);
-Route::resource('about', AboutController::class);
 Route::resource('destiny', DestinationController::class);
+Route::get('/', function(){return redirect('/home');});
 Route::resource('contact', ContactController::class);
+Route::resource('about', AboutController::class);
+Route::get('/book', function() {
+    return view('site.book');
+});

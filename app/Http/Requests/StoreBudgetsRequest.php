@@ -28,9 +28,8 @@ class StoreBudgetsRequest extends FormRequest
             'destination_budgets' => 'required',
             'checkout_in_date_budgets' => 'required',
             'checkout_out_date_budgets' => 'required',
-            'number_adults' => 'required',
-            'name_budgets'  => 'required|regex:/(^([a-zA-z]+)(\d+)?$)/u|min:5|max:15',
-            'phone_budgets' => 'required|min:11|numeric',
+            'name_budgets' => 'required|regex:/^([a-zA-Z]+)(\s[a-zA-Z]+)*$/|min:5',
+            'phone_budgets' => 'required|numeric',
             'email_budgets' => 'required|email'
         ];
     }
@@ -43,21 +42,17 @@ class StoreBudgetsRequest extends FormRequest
     public function messages()
     {
         return [
-            'origin_budgets.required' => 'Empty field',
-            'destination_budgets.required' => 'Empty field',
-            'checkout_in_date_budgets.required' => 'Empty field',
-            'checkout_out_date_budgets.required' => 'Empty field',
-            'number_adults.required' => 'Empty field',
-            'name_budgets.required'  => 'Empty field',
-            'phone_budgets.required' => 'Empty field',
-            'email_budgets.required' => 'Empty field',
-            'name_budgets.min'  => 'Minimum 5',
-            'name_budgets.max'  => 'Maximum 15',
-            'name_budgets.regex'  => 'Not number',
-            'phone_budgets.min' => 'Minimum 11',
-            'phone_budgets.max' => 'Maximum 19',
+            'origin_budgets.required' => 'Field is required',
+            'destination_budgets.required' => 'Field is required',
+            'checkout_in_date_budgets.required' => 'Field is required',
+            'checkout_out_date_budgets.required' => 'Field is required',
+            'name_budgets.regex' => 'No number',
+            'name_budgets.required' => 'Field is required',
+            'name_budgets.min' => 'Minimum 5',
+            'phone_budgets.required' => 'Field is required',
             'phone_budgets.numeric' => 'Only number',
-            'email_budgets.email'   => 'Invalid email'
+            'email_budgets.required' => 'Field is required',
+            'email_budgets.email' => 'Not email'
         ];
     }
 }
