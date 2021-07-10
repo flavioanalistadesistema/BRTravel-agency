@@ -13,7 +13,7 @@
 
             <div class="row">
                 <div class="search-wrap-book ftco-animate p-4">
-                    @include('site.layouts._forms.form_budget')
+                @include('site.layouts._forms.form_budget', ['numbersPerson' => $numbersPerson]);
                 </div>
             </div>
         </div>
