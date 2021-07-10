@@ -28,7 +28,7 @@ class StoreBudgetsRequest extends FormRequest
             'destination_budgets' => 'required',
             'checkout_in_date_budgets' => 'required',
             'checkout_out_date_budgets' => 'required',
-            'name_budgets' => 'required|regex:/^([a-zA-Z]+)(\s[a-zA-Z]+)*$/|min:5',
+            'name_budgets' => 'required|regex:/^([a-zA-Z]+)(\s[a-zA-Z]+)*$/|min:1',
             'phone_budgets' => 'required|numeric',
             'email_budgets' => 'required|email'
         ];
