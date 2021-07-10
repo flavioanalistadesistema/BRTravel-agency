@@ -3,11 +3,13 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AutoCompleteController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PhpMailerController;
 use App\Mail\emailTravelSistem;
+use App\Models\Book;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
@@ -35,6 +37,4 @@ Route::resource('destiny', DestinationController::class);
 Route::get('/', function(){return redirect('/home');});
 Route::resource('contact', ContactController::class);
 Route::resource('about', AboutController::class);
-Route::get('/book', function() {
-    return view('site.book');
-});
+Route::resource('/book', BookController::class);
