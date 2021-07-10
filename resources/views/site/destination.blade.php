@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="search-wrap-1 ftco-animate p-4">
-                @include('site.layouts._forms.form_budget')
+                @include("site.layouts._forms.form_budget", ["numbersPerson" => $numbersPerson])
                 </div>
             </div>
         </div>
