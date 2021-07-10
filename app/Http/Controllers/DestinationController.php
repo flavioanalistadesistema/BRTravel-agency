@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Destination;
 use Illuminate\Http\Request;
+use App\NamesMap\Form;
 
 class DestinationController extends Controller
 {
@@ -15,7 +16,8 @@ class DestinationController extends Controller
     public function index()
     {
         $title = "Destiny";
-        return view('site.destination', compact('title'));
+        $numbersPerson = Form::NUMBERS_PERSON;
+        return view('site.destination', compact('title', 'numbersPerson'));
     }
 
     /**
