@@ -19,75 +19,8 @@
 <section class="ftco-section ftco-no-pb ftco-no-pt">
     <div class="container">
         <div class="search-wrap-1 ftco-animate p-4">
-            @include('site.layouts._forms.form_budget')
+            @include("site.layouts._forms.form_budget", ["numbersPerson" => $numbersPerson])
         </div>
-        <!-- <div class="row">
-            <div class="col-md-12">
-                <div class="search-wrap-1 ftco-animate p-4">
-                    <form action="#" class="search-property-1">
-                        <div class="row">
-                            <div class="col-lg align-items-end">
-                                <div class="form-group">
-                                    <label for="#">Origin</label>
-                                    <div class="form-field">
-                                        <div class="icon"><span class="ion-ios-search"></span></div>
-                                        <select name="" id="" class="form-control">
-                                            @foreach($aeroports as $aeroport)
-                                            <option value="">{{$aeroport}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg align-items-end">
-                                <div class="form-group">
-                                    <label for="#">Destino</label>
-                                    <div class="form-field">
-                                        <div class="icon"><span class="ion-ios-search"></span></div>
-                                        <select name="" id="" class="form-control">
-                                            @foreach($aeroports as $aeroport)
-                                            <option value="">{{$aeroport}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg align-items-end">
-                                <div class="form-group">
-                                    <label for="#">Check-in date</label>
-                                    <div class="form-field">
-                                        <div class="icon"><span class="ion-ios-calendar"></span></div>
-                                        <input type="text" class="form-control checkin_date" placeholder="Check In Date">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg align-items-end">
-                                <div class="form-group">
-                                    <label for="#">Check-out date</label>
-                                    <div class="form-field">
-                                        <div class="icon"><span class="ion-ios-calendar"></span></div>
-                                        <input type="text" class="form-control checkout_date" placeholder="Check Out Date">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg align-items-end">
-                                <div class="form-group">
-                                    <label for="#">E-mail</label>
-                                    <input type="text" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="col-lg align-self-end">
-                                <div class="form-group">
-                                    <div class="form-field">
-                                        <input type="submit" value="Search" class="form-control btn btn-primary">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div> -->
     </div>
 </section>
 
