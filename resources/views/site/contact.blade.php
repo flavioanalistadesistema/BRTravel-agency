@@ -31,7 +31,8 @@
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+	            <p><a href="tel://1234567920">+(914) 902-5008
+</a></p>
 	          </div>
           </div>
           <div class="col-md-3 d-flex">
@@ -55,7 +56,7 @@
         </div>
       </div>
     </section>
-			
+
 		<section class="ftco-section contact-section">
       <div class="container">
         <div class="row block-9">
@@ -77,7 +78,7 @@
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
             </form>
-          
+
           </div>
 
           <div class="col-md-6 d-flex">
