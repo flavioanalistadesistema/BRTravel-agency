@@ -1052,7 +1052,7 @@ class BubdgetAeroport extends Seeder
             ],
             [
                 "acronyms" => "GRU",
-                "aeroport" => "SP, Brasil Guarulhos / F. Montoro"
+                "aeroport" => "São Paulo, Brasil Guarulhos / F. Montoro"
             ],
             [
                 "acronyms" => "GRX",
