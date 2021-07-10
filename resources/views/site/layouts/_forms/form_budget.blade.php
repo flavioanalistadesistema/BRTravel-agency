@@ -24,7 +24,7 @@
         <div class="col-lg-2">
             <label for="#"></label>
             <div class="form-field">
-                <input type="text" name="checkout_in_date_budgets" placeholder="Check-in" value="{{ old('checkout_in_date_budgets') }}" autofocus class="form-control checkout_date {{$errors->has('checkout_in_date_budgets') ? 'border-error-budgets': ''}}">
+                <input type="text" name="checkout_in_date_budgets" placeholder="Depart" value="{{ old('checkout_in_date_budgets') }}" autofocus class="form-control checkout_date {{$errors->has('checkout_in_date_budgets') ? 'border-error-budgets': ''}}">
                 @if ($errors->has('checkout_in_date_budgets'))
                 <li class="error_budgets">{{$errors->first('checkout_in_date_budgets')}}</li>
                 @endif
@@ -33,7 +33,7 @@
         <div class="col-lg-2">
             <label for="#"></label>
             <div class="form-field">
-                <input type="text" name="checkout_out_date_budgets" placeholder="Check-out" value="{{ old('checkout_out_date_budgets') }}" autofocus class="form-control checkout_date {{$errors->has('checkout_out_date_budgets') ? 'border-error-budgets': ''}}">
+                <input type="text" name="checkout_out_date_budgets" placeholder="return" value="{{ old('checkout_out_date_budgets') }}" autofocus class="form-control checkout_date {{$errors->has('checkout_out_date_budgets') ? 'border-error-budgets': ''}}">
                 @if ($errors->has('checkout_out_date_budgets'))
                 <li class="error_budgets">{{$errors->first('checkout_out_date_budgets')}}</li>
                 @endif
@@ -53,7 +53,7 @@
         <div class="col-lg-2">
             <label for="#"></label>
             <div class="form-fiel">
-                <input class="form-control {{$errors->has('phone_budgets') ? 'border-error-budgets': ''}}" placeholder="Phone" type="text" name="phone_budgets" value="{{ old('phone_budgets') }}"  id="phone_budgets">
+                <input class="form-control {{$errors->has('phone_budgets') ? 'border-error-budgets': ''}}" placeholder="Phone" type="text" name="phone_budgets" value="{{ old('phone_budgets') }}" id="phone_budgets">
                 @if ($errors->has('phone_budgets'))
                 <li class="error_budgets">{{ $errors->first('phone_budgets') }}</li>
                 @endif
@@ -62,18 +62,116 @@
         <div class="col-lg-4">
             <label for="#"></label>
             <div class="form-fiel">
-                <input class="form-control {{$errors->has('email_budgets') ? 'border-error-budgets': ''}}" placeholder="E-mail" type="text" name="email_budgets" value="{{ old('email_budgets') }}" autofocus >
+                <input class="form-control {{$errors->has('email_budgets') ? 'border-error-budgets': ''}}" placeholder="E-mail" type="text" name="email_budgets" value="{{ old('email_budgets') }}" autofocus>
                 @if ($errors->has('email_budgets'))
                 <li class="error_budgets">{{$errors->first('email_budgets')}}</li>
                 @endif
             </div>
         </div>
+        <div class="col-lg-2 col-sm-2">
+            <label></label>
+            <div class="form-field">
+                <select name="adults_budgets" data-placeholder="Adults" class="form-control {{$errors->has('origin_budgets') ? 'border-error-budgets': ''}}">
+                    <option value="" disabled selected>Adult</option>
+                    @foreach($numbersPerson as $number)
+                    <option value="{{old('adults_budgets', $number)}}"> {{$number}} </option>
+                    @endforeach
+                </select>
+                @if ($errors->has('adults_budgets'))
+                <li class="error_budgets">{{ $errors->first('adults_budgets') }}</li>
+                @endif
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-2">
+            <label></label>
+            <div class="form-field">
+                <select name="children_budgets" id="children_budgets" class="form-control {{$errors->has('origin_budgets') ? 'border-error-budgets': ''}}">
+                    <option value="" disabled selected>Children</option>
+                    @foreach($numbersPerson as $number)
+                    <option value="{{old('adults_budgets', $number)}}"> {{$number}} </option>
+                    @endforeach
+                </select>
+                @if ($errors->has('adults_budgets'))
+                <li class="error_budgets">{{ $errors->first('adults_budgets') }}</li>
+                @endif
+            </div>
+        </div>
+    </div>
+
+    <!- Button submit ->
+    <div class="row">
         <div class="col-lg align-self-end">
             <label for="#"></label>
             <div class="form-group">
                 <div class="form-field">
                     <input type="submit" value="Submit" class="form-control btn btn-primary">
                 </div>
+            </div>
+        </div>
+        <div class="col-lg-1 col-sm-1">
+            <label></label>
+            <div class="form-field">
+                <small style="display: none; text-transform: uppercase">1 chield</small>
+                <select name="children_age_budgets" id="chield1" style="display: none; text-transform: uppercase" class="form-control {{$errors->has('origin_budgets') ? 'border-error-budgets': ''}}">
+                    @foreach($numbersPerson as $number)
+                    <option value="{{$number}}"> {{$number}} </option>
+                    @endforeach
+                </select>
+                @if ($errors->has('adults_budgets'))
+                <li class="error_budgets">{{ $errors->first('adults_budgets') }}</li>
+                @endif
+            </div>
+        </div>
+        <div class="col-lg-1 col-sm-1">
+            <label></label>
+            <div class="form-field">
+                <select name="children_age_budgets" id="chield2" style="display: none; text-transform: uppercase" class="form-control {{$errors->has('origin_budgets') ? 'border-error-budgets': ''}}">
+                    @foreach($numbersPerson as $number)
+                    <option value="{{$number}}"> {{$number}} </option>
+                    @endforeach
+                </select>
+                @if ($errors->has('adults_budgets'))
+                <li class="error_budgets">{{ $errors->first('adults_budgets') }}</li>
+                @endif
+            </div>
+        </div>
+        <div class="col-lg-1 col-sm-1">
+            <label></label>
+            <div class="form-field">
+                <select name="children_age_budgets" id="chield3" style="display: none; text-transform: uppercase" class="form-control {{$errors->has('origin_budgets') ? 'border-error-budgets': ''}}">
+                    @foreach($numbersPerson as $number)
+                    <option value="{{$number}}"> {{$number}} </option>
+                    @endforeach
+                </select>
+                @if ($errors->has('adults_budgets'))
+                <li class="error_budgets">{{ $errors->first('adults_budgets') }}</li>
+                @endif
+            </div>
+        </div>
+        <div class="col-lg-1 col-sm-1">
+            <label></label>
+            <div class="form-field">
+                <select name="children_age_budgets" id="chield4" style="display: none; text-transform: uppercase" class="form-control {{$errors->has('origin_budgets') ? 'border-error-budgets': ''}}">
+                    @foreach($numbersPerson as $number)
+                    <option value="{{$number}}"> {{$number}} </option>
+                    @endforeach
+                </select>
+                @if ($errors->has('adults_budgets'))
+                <li class="error_budgets">{{ $errors->first('adults_budgets') }}</li>
+                @endif
+            </div>
+        </div>
+        <div class="col-lg-1 col-sm-1">
+            <label></label>
+            <div class="form-field">
+                <select name="children_age_budgets" id="chield5" style="display: none; text-transform: uppercase" class="form-control {{$errors->has('origin_budgets') ? 'border-error-budgets': ''}}">
+                    @foreach($numbersPerson as $number)
+                    <option value="{{$number}}"> {{$number}} </option>
+                    @endforeach
+                </select>
+                @if ($errors->has('adults_budgets'))
+                <li class="error_budgets">{{ $errors->first('adults_budgets') }}</li>
+                @endif
             </div>
         </div>
     </div>
@@ -89,7 +187,7 @@
         delay: 500,
         pageLoadErrorMessage: "Error Message...",
         formatNoMatches: function(term) {
-            return "Nenhum resultado. Adicionar " + term + "?";
+            return "Nenhum resultado. To add " + term + "?";
         },
         ajax: {
             url: '/autocomplete/show',
@@ -122,5 +220,47 @@
             }
         }
     });
+
+    $(function () {
+        $("#children_budgets").click(function () {
+            if($("#children_budgets").val() === "0") {
+            $("#chield1").css({ display: "none" });
+            $("#chield2").css({ display: "none" });
+            $("#chield3").css({ display: "none" });
+            $("#chield4").css({ display: "none" });
+            $("#chield5").css({ display: "none" });
+            }
+            if ($("#children_budgets").val() === "5") {
+            $("#chield1").css({ display: "block" });
+            $("#chield2").css({ display: "block" });
+            $("#chield3").css({ display: "block" });
+            $("#chield4").css({ display: "block" });
+            $("#chield5").css({ display: "block" });
+          }
+          if ($("#children_budgets").val() === "4") {
+            $("#chield1").css({ display: "block" });
+            $("#chield2").css({ display: "block" });
+            $("#chield3").css({ display: "block" });
+            $("#chield4").css({ display: "block" });
+          }
+          if ($("#children_budgets").val() === "3") {
+            $("#chield1").css({ display: "block" });
+            $("#chield2").css({ display: "block" });
+            $("#chield3").css({ display: "block" });
+          }
+          if ($("#children_budgets").val() === "2") {
+            $("#chield1").css({ display: "block" });
+            $("#chield2").css({ display: "block" });
+          }
+          if ($("#children_budgets").val() === "1") {
+            $("#chield1").css({ display: "block" });
+            $("#chield2").css({ display: "none" });
+            $("#chield3").css({ display: "none" });
+            $("#chield4").css({ display: "none" });
+            $("#chield5").css({ display: "none" });
+          }
+
+        });
+      });
 </script>
 @show
